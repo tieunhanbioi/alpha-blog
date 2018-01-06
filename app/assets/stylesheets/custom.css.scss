@@ -1,2 +1,60 @@
+$navbar-default-bg: #08088A;
+$white-color: #fff;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+nav.navbar-default {
+  #logo {
+    float: left;
+    font-size: 1.7em;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+div.jumbotron {
+  background-image: url("finalfan.jpg");
+  background-size: cover;
+  height: 550px;
+
+  h1 {
+   color: $white-color;
+   margin-bottom: 30px;
+   letter-spacing: -1px;
+   font-weight: bold;
+  }
+  a{
+    font-size: 1.7em;
+    background-color: black;
+  }
+}
+
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #777;
+small {
+  float: left;
+  a:hover {
+    color: #222;
+  }
+}
+ul {
+  float: right;
+  list-style: none;
+  li {
+    float: left;
+    margin-left: 1em;
+  }
+}
+}
