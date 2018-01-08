@@ -4,7 +4,9 @@ $white-color: #fff;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+/*****************************************/
+/*=======__navigtion.html.erb+++++++=====*/
+/*****************************************/
 nav.navbar-default {
   #logo {
     float: left;
@@ -20,7 +22,9 @@ nav.navbar-default {
   }
 
 }
-
+/*****************************************/
+/*===========+++home.html.erb+++++++=====*/
+/*****************************************/
 div.jumbotron {
   background-image: url("finalfan.jpg");
   background-size: cover;
@@ -38,6 +42,9 @@ div.jumbotron {
   }
 }
 
+/*****************************************/
+/*===========_footer.html.erb+++++++=====*/
+/*****************************************/
 footer {
 margin-top: 45px;
 padding-top: 5px;
@@ -57,4 +64,17 @@ ul {
     margin-left: 1em;
   }
 }
+}
+
+/*****************************************/
+/*=========+++++show.html.erb+++++++=====*/
+/*****************************************/
+
+h4.text-center.description {
+  margin-top: 0;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
 }
