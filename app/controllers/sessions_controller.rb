@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
 
  #the create method is the one which checks the credential provide by the login form against those of the database
+ # this method is more appropriate if it name login method
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
