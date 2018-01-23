@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  has_many   :articles
+  # dependent: :destroy is a rails conveniant way of deleting all user's articles if
+  # user is deleted
+  has_many   :articles, dependent: :destroy
   before_save { self.email = email.downcase }
   validates  :username , presence: true,
              uniqueness: {case_sensitive: false },

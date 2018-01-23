@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
 # this method will return an integer , like 14 or whatever is in the session[:user_id] variable
 # this method stores the current logged in user into a variable
+# the session[:user_id] cannot exist if the user hasn't logged in 
   def current_user
     # a = nil
     # b = 20
