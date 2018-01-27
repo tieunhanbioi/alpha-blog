@@ -2,10 +2,14 @@ require 'test_helper'
 
 class CreateCategoriesTest < ActionDispatch::IntegrationTest
 
+   def setup
+     @user = User.create(:username => "anhhungca", :password => "tieunhan", :email => "anhhungca@gmail.com", :admin => true)
+   end
    test "get new category form and create category" do
 
      # get new_category_path
      # get the require url
+     post "http://localhost:3000/login", params: { session: { email: @user.email, password: "tieunhan" }}
      get "http://localhost:3000/categories/new"
      # assert that the requested template is indeed categories/new
      assert_template 'categories/new'
@@ -25,11 +29,13 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
    end
 
    test "invalid category submission results in failure" do
+     post "http://localhost:3000/login", params: { session: { email: @user.email, password: "tieunhan" }}
 
      # get the require url
      get "http://localhost:3000/categories/new"
      # assert that the requested template is indeed the categories/new
      assert_template 'categories/new'
+     # assert_select "h1", "Create a new category"
      #assert that there is no difference if http://localhost:3000/categories is
      #posted with empty name attribute , aka categories#create
      assert_no_difference 'Category.count' do
